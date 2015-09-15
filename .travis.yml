@@ -1,6 +1,17 @@
 language: php
 php:
-  - 5.5
-  - 5.4
-  - hhvm
+- 5.5
+- 5.4
+- hhvm
 script: phpunit Test.php
+deploy:
+  provider:
+    provider: cloudfoundry
+  api: https://api.run.pivotal.io
+  username: chwu@pivotal.io
+  password:
+    secure: OmL/FnT/WOZcggYpsp7Gb+mWSH2705eyEeTbu/vuJtO2ZXvUyTRcW1kJ2or/9NpCF/meOvS84scSoQwWLAXNMSQGQNKNEhFzuqtYzrqynoDS0+GCVe6ADIr/qpkp/Oz/gvmgV0i3neqxP1nuYZXRQUaJn68Spt//AKsP0vp2txEJ+7I8h/hhY2aQS15d24M0TgYZ+ivMuLjYQE1uZRUuCLwt6XbNXPddcRzb/9i8UV5Z2NfQsdn7zmSbMqVlJlEX5ZBMqXDMWCgq1lp0kQ7JpvIPbQLKtQYmfDNnnjJxRv8QVxaQ0V1e6fruexoSZg5V9yKug8lC35KQOpny4PMNfFH2bSB+9D+04z+bPOANLmUsW9HY8Q26mGoJ8riV7t3IBf6WsaV8HmkSNlzKf01qoC+4ddYLQb+8F0EZVMa1Td7QgN/9jLAH+Uru8IW/Fpiq+5B3uHX9eq42CbGBNFHHuZH56jAlInoqAhp4saQxbNGA0t2daONE0eq9e65UkjixzKPVHeReLtlCkRiGa5kpaeSoqbSPLIpsXKejopcRMoWwgrBX6LoVMGWANEtcaIrjBFx7kCFH5foVCDCmdfLjpRNFrJD3JqRabyYS1kAdorrDaZqvPti8Pouh1HRWS7bgBrEPm58gaJAJTRpgWC12yoytdGMAbV3wGmxPSDZRKWw=
+  organization: chwu@pivotal.io
+  space: development
+  on:
+    repo: ccwu-at-pivotal/travis-broken-example
