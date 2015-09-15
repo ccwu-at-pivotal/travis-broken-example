@@ -1,0 +1,6 @@
+---
+applications:
+- name: travis-test
+  memory: 128M
+  random-route: true
+
