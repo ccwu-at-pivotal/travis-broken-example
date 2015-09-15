@@ -5,6 +5,7 @@ php:
 - hhvm
 script: phpunit Test.php
 deploy:
+  edge: true
   provider:
     provider: cloudfoundry
   api: https://api.run.pivotal.io
